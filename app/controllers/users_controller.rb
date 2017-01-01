@@ -29,7 +29,7 @@ public
   # GET /users/1.json
   def show
     @user = User.find(params[:id])
-	@user =User.find(params[:id])
+	
 	@microposts = @user.microposts
 	@title = @user.name
     respond_to do |format|
@@ -61,7 +61,8 @@ end
     	@user = User.new(params[:user])
 	
       if @user.save
-	sign_in @save
+	
+	sign_in @user
        redirect_to @user
 	
       else
