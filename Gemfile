@@ -8,11 +8,12 @@ gem 'rails', '3.2.16'
 group :production do
     gem 'pg'
     gem 'heroku'
+    gem 'rails_12factor'
 end
 group :development, :test do
     gem 'sqlite3'
 end
-
+gem 'faker'
 
 # Gems used only for assets and not required
 # in production environments by default.

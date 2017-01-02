@@ -1,6 +1,8 @@
 class PagesController < ApplicationController
   def home
 	@title="Home"
+	@micropost =Micropost.new if !current_user.nil?
+	
   end
 
   def contact
